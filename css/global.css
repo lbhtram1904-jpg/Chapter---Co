@@ -3,3 +3,26 @@ Rose: #e8bfc8
 Lilac: #e7ddf2
 Cream: #fff9f1
 Mauve: #75535B*/
+/* Logo	#60434A
+Main headings	#60434A
+Body text	#80666B
+Navigation	#60434A
+Buttons	#A46F80
+Button text	#FFFFFF
+Links	#A46F80
+Dates / metadata	#80666B */
+
+* {
+    background-color: #fff9f1;
+}
+
+.header {
+    font-family: "Cormorant Garamond", serif;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+.handwritten{
+      font-family: "Caveat", cursive;
+}
