@@ -12,17 +12,48 @@ Button text	#FFFFFF
 Links	#A46F80
 Dates / metadata	#80666B */
 
-* {
-    background-color: #fff9f1;
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&family=Caveat:wght@400;500;600&display=swap');
+
+:root {
+    --cream: #FFF9F1;
+    --blush: #F8E8E9;
+    --rose: #E8BFC8;
+    --lilac: #E9DDF2;
+    --brown: #60434A;
+    --mauve: #80666B;
+    --vintage-rose: #A46F80;
+
+    --heading-font: 'Cormorant Garamond', serif;
+    --body-font: 'Poppins', sans-serif;
+    --handwriting-font: 'Caveat', cursive;
 }
 
-.header {
-    font-family: "Cormorant Garamond", serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: "Poppins", sans-serif;
+    background-color: var(--cream);
+    color: var(--brown);
+    font-family: var(--body-font);
 }
-.handwritten{
-      font-family: "Caveat", cursive;
+
+h1,
+h2,
+h3 {
+    font-family: var(--heading-font);
+    color: var(--brown);
+}
+
+button {
+    font-family: var(--body-font);
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
