@@ -1,7 +1,12 @@
 
+import {
+    auth,
+    createUserWithEmailAndPassword
+} from "./firebase.js";
+
 const signupForm = document.getElementById("signup");
 
-signupForm.addEventListener("submit", function(event) {
+signupForm.addEventListener("submit", async function(event) {
     event.preventDefault();
 
     const email = document.getElementById("email").value.trim();
@@ -18,5 +23,18 @@ signupForm.addEventListener("submit", function(event) {
         return;
     }
 
-    alert("Your form is working! ♡");
+    try {
+        const userCredential = await createUserWithEmailAndPassword(
+            auth,
+            email,
+            password
+        );
+
+        alert("Welcome to Chapter & Co.! Your account has been created ♡");
+
+        window.location.href = "index.html";
+
+    } catch (error) {
+        alert("Signup failed: " + error.message);
+    }
 });
