@@ -523,3 +523,137 @@ main {
 .action-card {
     cursor: pointer;
 }
+
+/* ADD BOOK FORM */
+
+.library-page {
+    margin-left: 250px;
+    padding: 40px;
+}
+
+.library-page h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.library-page>p {
+    color: var(--mauve);
+    margin-bottom: 35px;
+}
+
+.add-book-section {
+    background-color: #FFFDF9;
+    padding: 35px;
+    border-radius: 20px;
+    max-width: 650px;
+    border: 1px solid #E8D8D4;
+}
+
+.add-book-section h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+#addBookForm {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#addBookForm label {
+    font-size: 13px;
+    color: var(--brown);
+}
+
+#addBookForm input,
+#addBookForm select {
+    padding: 13px;
+    border: 1px solid #E8BFC8;
+    border-radius: 10px;
+    background-color: #FFF9F1;
+    color: var(--brown);
+    font-family: var(--body-font);
+    margin-bottom: 12px;
+}
+
+#addBookForm button {
+    background-color: var(--vintage-rose);
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 12px;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+#addBookForm button:hover {
+    background-color: var(--mauve);
+}
+
+/* SAVED BOOK COLLECTION */
+
+.my-books {
+    margin-top: 40px;
+    max-width: 900px;
+}
+
+.my-books h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+#bookCollection {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.saved-book-card {
+    background-color: #F8E8E9;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #E8BFC8;
+}
+
+.saved-book-card h3 {
+    font-size: 21px;
+    margin-bottom: 8px;
+}
+
+.saved-book-card p {
+    color: #80666B;
+    font-size: 13px;
+    margin-top: 6px;
+}
+
+@media (max-width: 700px) {
+    #bookCollection {
+        grid-template-columns: 1fr;
+    }
+}
+
+.book-cover {
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    background-color: #FFF9F1;
+}
+
+.delete-book {
+    background-color: #E8BFC8;
+    color: #60434A;
+    border: none;
+    padding: 9px 15px;
+    border-radius: 10px;
+    font-size: 12px;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.delete-book:hover {
+    background-color: #A46F80;
+    color: white;
+    transform: translateY(-2px);
+}

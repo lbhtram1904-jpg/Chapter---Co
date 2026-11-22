@@ -12,14 +12,76 @@
 </head>
 
 <body>
+    <nav class="sidebar">
+
+        <h2 class="logo">Chapter & Co.</h2>
+
+        <p class="nav-heading">YOUR LITTLE WORLD</p>
+
+        <a href="index.html">⌂ Home</a>
+        <a href="library.html">♡ My Library</a>
+        <a href="journal.html">✎ Reading Journal</a>
+        <a href="quotes.html">❝ Quotes & Highlights</a>
+        <a href="discover.html">⌕ Discover</a>
+        <a href="recap.html">✿ Monthly Recap</a>
+        <a href="profile.html">♧ My Profile</a>
+
+    </nav>
 
     <main class="library-page">
 
         <h1>My Little Library ♡</h1>
 
         <p>Your collection of stories, memories and adventures.</p>
+        <section class="add-book-section">
+
+            <h2>Add a New Book ♡</h2>
+
+            <form id="addBookForm">
+
+                <label for="bookTitle">Book Title</label>
+                <input type="text" id="bookTitle" placeholder="Enter book title..." required>
+
+                <label for="bookAuthor">Author</label>
+                <input type="text" id="bookAuthor" placeholder="Enter author name..." required>
+                <label for="bookCover">Book Cover Image URL (optional)</label>
+                <input type="url" id="bookCover" placeholder="Paste an image link...">
+                <label for="bookGenre">Genre</label>
+                <select id="bookGenre" required>
+                    <option value="">Choose a genre</option>
+                    <option>Fantasy</option>
+                    <option>Romance</option>
+                    <option>Romantasy</option>
+                    <option>Mystery</option>
+                    <option>Thriller</option>
+                    <option>Contemporary</option>
+                    <option>Other</option>
+                </select>
+
+                <label for="bookStatus">Reading Status</label>
+                <select id="bookStatus" required>
+                    <option value="Want to Read">Want to Read</option>
+                    <option value="Currently Reading">Currently Reading</option>
+                    <option value="Finished">Finished</option>
+                </select>
+
+                <button type="submit">Add to My Library ♡</button>
+
+            </form>
+
+        </section>
+
+        <section class="my-books">
+
+            <h2>My Collection ♡</h2>
+
+            <div id="bookCollection">
+            </div>
+
+        </section>
 
     </main>
-
+    <script src="../js/app.js"></script>
 </body>
+
 </html>
