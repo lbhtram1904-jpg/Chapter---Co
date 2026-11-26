@@ -1,4 +1,3 @@
-
 const API_KEY = "AIzaSyDRQaEYeo-FsIa9o7kmfit-tjAoH2Od9Ic";
 
 const GOOGLE_BOOKS_URL =
@@ -9,6 +8,10 @@ async function searchBooks(query) {
     const url = `${GOOGLE_BOOKS_URL}?q=${encodeURIComponent(query)}&key=${API_KEY}`;
 
     const response = await fetch(url);
+
+    if (!response.ok) {
+        throw new Error("Google Books API request failed: " + response.status);
+    }
 
     const data = await response.json();
 
