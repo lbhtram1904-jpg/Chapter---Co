@@ -4,28 +4,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Reading Journal | Chapter & Co.</title>
+
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="../css/journal.css">
 </head>
 
 <body>
+
+    <!-- SIDEBAR -->
     <nav class="sidebar">
 
         <h2 class="logo">Chapter & Co.</h2>
 
         <p class="nav-heading">YOUR LITTLE WORLD</p>
 
-        <a href="index.html">⌂ Home</a>
+        <a href="../index.html">⌂ Home</a>
         <a href="library.html">♡ My Library</a>
-        <a href="journal.html">✎ Reading Journal</a>
+        <a href="journal.html" class="active">✎ Reading Journal</a>
         <a href="quotes.html">❝ Quotes & Highlights</a>
         <a href="discover.html">⌕ Discover</a>
         <a href="recap.html">✿ Monthly Recap</a>
         <a href="profile.html">♧ My Profile</a>
 
     </nav>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="journal-page">
+
+        <!-- HEADER -->
+        <header class="journal-header">
+            <p class="handwritten">A little space for your thoughts ♡</p>
+            <h1>My Reading Journal</h1>
+            <p>
+                Every book leaves a little piece of itself with us.
+                Save your favourite memories here.
+            </p>
+        </header>
+
+
+        <!-- JOURNAL STATS -->
+        <section class="journal-stats">
+
+            <div class="journal-stat-card">
+                <span>✎</span>
+                <h2 id="totalEntries">0</h2>
+                <p>Journal Entries</p>
+            </div>
+
+            <div class="journal-stat-card">
+                <span>♡</span>
+                <h2 id="booksReviewed">0</h2>
+                <p>Books Reviewed</p>
+            </div>
+
+        </section>
+
+
+        <!-- NEW ENTRY -->
+        <section class="journal-write">
+
+            <div class="section-heading">
+                <div>
+                    <p class="handwritten">Dear diary...</p>
+                    <h2>Write a New Entry</h2>
+                </div>
+                <span>✿</span>
+            </div>
+
+            <form id="journalForm">
+
+                <label for="entryTitle">Entry Title</label>
+                <input type="text" id="entryTitle" placeholder="A thought worth remembering..." required>
+                <label for="entryCover">Book Cover Image URL (Optional)</label>
+                <input type="url" id="entryCover" placeholder="Paste a book cover image link...">
+                <label for="entryBook">Book Title</label>
+
+                <input type="text" id="entryBook" placeholder="Which book are you writing about?">
+
+                <label for="entryRating">Your Rating</label>
+                <select id="entryRating">
+                    <option value="">Choose a rating</option>
+                    <option value="5">★★★★★ - Loved it!</option>
+                    <option value="4">★★★★ - Really enjoyed it</option>
+                    <option value="3">★★★ - It was good</option>
+                    <option value="2">★★ - It was okay</option>
+                    <option value="1">★ - Not for me</option>
+                </select>
+
+                <label for="entryContent">Your Thoughts</label>
+                <textarea id="entryContent" rows="7"
+                    placeholder="Write about your favourite characters, moments, theories, feelings..."
+                    required></textarea>
+
+                <button type="submit" class="save-entry-btn">
+                    Save Journal Entry ♡
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- SAVED ENTRIES -->
+        <section class="journal-entries">
+
+            <div class="section-heading">
+                <div>
+                    <p class="handwritten">Little memories</p>
+                    <h2>My Entries</h2>
+                </div>
+            </div>
+
+            <div id="journalEntries" class="journal-entry-grid">
+
+                <div class="empty-journal">
+                    <span>📖</span>
+                    <h3>Your story starts here</h3>
+                    <p>Your journal entries will appear here once you save them.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="../js/journal.js"></script>
+
 </body>
 
 </html>

@@ -1,30 +1,151 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Monthly Recap | Chapter & Co.</title>
+
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/recap.css">
 </head>
 
 <body>
+
+    <!-- SIDEBAR -->
     <nav class="sidebar">
 
         <h2 class="logo">Chapter & Co.</h2>
 
         <p class="nav-heading">YOUR LITTLE WORLD</p>
 
-        <a href="index.html">⌂ Home</a>
+        <a href="../index.html">⌂ Home</a>
         <a href="library.html">♡ My Library</a>
         <a href="journal.html">✎ Reading Journal</a>
         <a href="quotes.html">❝ Quotes & Highlights</a>
         <a href="discover.html">⌕ Discover</a>
-        <a href="recap.html">✿ Monthly Recap</a>
+        <a href="recap.html" class="active">✿ Monthly Recap</a>
         <a href="profile.html">♧ My Profile</a>
 
     </nav>
-</body>
 
+
+    <!-- MAIN CONTENT -->
+    <main class="recap-page">
+
+        <!-- HEADER -->
+        <header class="recap-header">
+            <p class="handwritten">A month full of stories ♡</p>
+            <h1>My Reading Recap</h1>
+            <p>Every month deserves its own little bookshelf.</p>
+        </header>
+
+
+        <!-- MONTH SELECTOR -->
+        <section class="recap-month">
+            <button id="previousMonth">←</button>
+            <h2 id="currentMonth">November 2026</h2>
+            <button id="nextMonth">→</button>
+        </section>
+
+
+        <!-- READING STATISTICS -->
+        <section class="recap-stats">
+
+            <div class="recap-stat-card pink">
+                <span>📚</span>
+                <h2 id="booksRead">0</h2>
+                <p>Books Read</p>
+            </div>
+
+            <div class="recap-stat-card blue">
+                <span>📖</span>
+                <h2 id="pagesRead">0</h2>
+                <p>Pages Read</p>
+            </div>
+
+            <div class="recap-stat-card purple">
+                <span>⭐</span>
+                <h2 id="averageRating">—</h2>
+                <p>Average Rating</p>
+            </div>
+
+            <div class="recap-stat-card sage">
+                <span>♡</span>
+                <h2 id="quotesSaved">0</h2>
+                <p>Quotes Saved</p>
+            </div>
+
+        </section>
+
+
+        <!-- READING GOAL -->
+        <section class="reading-goal-section">
+
+            <p class="handwritten">Little by little, page by page</p>
+            <h2>My Monthly Reading Goal</h2>
+
+            <div class="goal-details">
+                <span id="goalProgressText">0 of 5 books</span>
+                <span id="goalPercentage">0%</span>
+            </div>
+
+            <div class="goal-progress-bar">
+                <div id="goalProgressFill"></div>
+            </div>
+
+            <button id="editGoalButton">Edit Monthly Goal</button>
+
+        </section>
+
+
+        <!-- FAVOURITE BOOK -->
+        <section class="favourite-book-section">
+
+            <p class="handwritten">The one that stole my heart</p>
+            <h2>Favourite Book of the Month</h2>
+
+            <div id="favouriteBook">
+                <p>Finish reading a book this month to choose your favourite! ♡</p>
+            </div>
+
+        </section>
+
+
+        <!-- MONTHLY REFLECTION -->
+        <section class="monthly-reflection">
+
+            <p class="handwritten">A little note to myself</p>
+            <h2>My Monthly Reflection</h2>
+
+            <textarea
+                id="monthlyReflection"
+                rows="6"
+                placeholder="What did you love about this month's reading? What surprised you? Which characters stayed with you?"
+            ></textarea>
+
+            <button id="saveReflection">Save Reflection ♡</button>
+
+        </section>
+
+
+        <!-- BOOKS READ THIS MONTH -->
+        <section class="monthly-books-section">
+
+            <p class="handwritten">Every story counts</p>
+            <h2>Books I Read</h2>
+
+            <div id="monthlyBooks" class="monthly-books-grid">
+                <p>Your completed books will appear here. ♡</p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="../js/recap.js"></script>
+
+</body>
 </html>

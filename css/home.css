@@ -1565,3 +1565,11 @@ a:hover {
 .discover-book-card button:hover {
     transform: translateY(-2px);
 }
+.recommendation-message {
+    background: #F8E8E9;
+    padding: 25px;
+    border-radius: 18px;
+    color: #80666B;
+    line-height: 1.8;
+    max-width: 500px;
+}

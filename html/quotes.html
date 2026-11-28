@@ -4,27 +4,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Quotes & Highlights | Chapter & Co.</title>
+
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/quotes.css">
 </head>
 
 <body>
+
+    <!-- SIDEBAR -->
     <nav class="sidebar">
 
         <h2 class="logo">Chapter & Co.</h2>
 
         <p class="nav-heading">YOUR LITTLE WORLD</p>
 
-        <a href="index.html">⌂ Home</a>
+        <a href="../index.html">⌂ Home</a>
         <a href="library.html">♡ My Library</a>
         <a href="journal.html">✎ Reading Journal</a>
-        <a href="quotes.html">❝ Quotes & Highlights</a>
+        <a href="quotes.html" class="active">❝ Quotes & Highlights</a>
         <a href="discover.html">⌕ Discover</a>
         <a href="recap.html">✿ Monthly Recap</a>
         <a href="profile.html">♧ My Profile</a>
 
     </nav>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="quotes-page">
+
+        <!-- HEADER -->
+        <header class="quotes-header">
+            <p class="handwritten">Words worth keeping ♡</p>
+            <h1>Quotes & Highlights</h1>
+            <p>
+                A little collection of words that stayed with you.
+            </p>
+        </header>
+
+
+        <!-- QUOTE STATISTICS -->
+        <section class="quote-stats">
+
+            <div class="quote-stat-card">
+                <span>❝</span>
+                <h2 id="totalQuotes">0</h2>
+                <p>Saved Quotes</p>
+            </div>
+
+            <div class="quote-stat-card">
+                <span>♡</span>
+                <h2 id="favouriteQuotes">0</h2>
+                <p>Favourite Quotes</p>
+            </div>
+
+        </section>
+
+
+        <!-- ADD A QUOTE -->
+        <section class="add-quote-section">
+
+            <div class="section-heading">
+                <div>
+                    <p class="handwritten">Save a little magic</p>
+                    <h2>Add a New Quote</h2>
+                </div>
+                <span>✿</span>
+            </div>
+
+            <form id="quoteForm">
+
+                <label for="quoteText">Quote</label>
+                <textarea id="quoteText" rows="4" placeholder="Write a quote you never want to forget..."
+                    required></textarea>
+
+                <label for="quoteBook">Book Title</label>
+                <input type="text" id="quoteBook" placeholder="Which book is it from?" required>
+
+                <label for="quoteAuthor">Book Author</label>
+                <input type="text" id="quoteAuthor" placeholder="Who wrote it?">
+
+                <label for="quoteNote">Personal Note (Optional)</label>
+                <textarea id="quoteNote" rows="3" placeholder="Why does this quote mean something to you?"></textarea>
+
+                <button type="submit" class="save-quote-btn">
+                    Save Quote ♡
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- SAVED QUOTES -->
+        <section class="saved-quotes-section">
+
+            <div class="section-heading">
+                <div>
+                    <p class="handwritten">Your favourite words</p>
+                    <h2>My Collection</h2>
+                </div>
+            </div>
+
+            <div class="quote-filters">
+                <button class="quote-filter active" data-filter="all">
+                    All Quotes
+                </button>
+
+                <button class="quote-filter" data-filter="favourites">
+                    ♡ Favourites
+                </button>
+            </div>
+
+            <div id="quotesGrid" class="quotes-grid">
+
+                <div class="empty-quotes">
+                    <span>♡</span>
+                    <h3>No quotes saved yet</h3>
+                    <p>Save your first favourite quote to start your collection.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="../js/quotes.js"></script>
+
 </body>
 
 </html>
